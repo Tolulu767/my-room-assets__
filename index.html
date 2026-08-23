@@ -8,111 +8,46 @@
 </head>
 <body>
 
-  <!-- Floating Decorative Background Blobs -->
   <div class="blob blob1"></div>
   <div class="blob blob2"></div>
 
-  <div class="main-layout">
-    <!-- Left Column: The Main Desk Dashboard -->
-    <div class="dashboard-container">
-      <h1 id="main-title">🎀 Desk Setup</h1>
-      <p id="greeting-text" class="subtitle">Click on any desk item to reveal its launcher portal!</p>
+  <div class="dashboard-container">
+    <h1 id="main-title">🎀 Desk Setup</h1>
+    <p id="greeting-text" class="subtitle">✨ Welcome back to your cozy workspace! ✨</p>
 
-      <!-- Expanded 2D Interactive Desk Row -->
-      <div class="desk-setup">
-        <!-- Item 1: Laptop -->
-        <div class="desk-item laptop" onclick="clickOnDeskItem('YouTube')">
-          <div class="icon">📺</div>
-          <span class="label">Laptop</span>
-        </div>
-
-        <!-- Item 2: French Notepad -->
-        <div class="desk-item notepad" onclick="clickOnDeskItem('innerFrench')">
-          <div class="icon">🇫🇷</div>
-          <span class="label">Notebook</span>
-        </div>
-
-        <!-- Item 3: Coffee Cup (NEW!) -->
-        <div class="desk-item coffee" onclick="clickOnDeskItem('Gmail')">
-          <div class="icon">☕</div>
-          <span class="label">Coffee</span>
-        </div>
-
-        <!-- Item 4: Headphones -->
-        <div class="desk-item headphones" onclick="clickOnDeskItem('Spotify')">
-          <div class="icon">🎵</div>
-          <span class="label">Headset</span>
-        </div>
-
-        <!-- Item 5: Stack of Books -->
-        <div class="desk-item books" onclick="clickOnDeskItem('Sora')">
-          <div class="icon">📚</div>
-          <span class="label">Sora Books</span>
-        </div>
-
-        <!-- Item 6: Cute Plant (NEW!) -->
-        <div class="desk-item plant" onclick="clickOnDeskItem('Plant')">
-          <div class="icon">🌱</div>
-          <span class="label">Plant</span>
-        </div>
+    <!-- Interactive Pastel Desk -->
+    <div class="desk-setup">
+      <div class="desk-item laptop" onclick="clickOnDeskItem('YouTube')">
+        <div class="icon">📺</div>
+        <span class="label">Laptop</span>
       </div>
-
-      <!-- Theme-Shifting Glassmorphic Display Card -->
-      <div id="glass-card" class="glass-card">
-        <h2 id="portal-title">🌸 Hub Standby</h2>
-        <p id="portal-desc">Your preppy room launcher is waiting. Tap a desk asset above to light up a connection portal!</p>
-        <a id="portal-link" href="#" target="_blank" style="display: none;">🚀 Open Portal</a>
+      <div class="desk-item notepad" onclick="clickOnDeskItem('innerFrench')">
+        <div class="icon">🇫🇷</div>
+        <span class="label">Notebook</span>
+      </div>
+      <div class="desk-item coffee" onclick="clickOnDeskItem('Gmail')">
+        <div class="icon">☕</div>
+        <span class="label">Coffee</span>
+      </div>
+      <div class="desk-item headphones" onclick="clickOnDeskItem('Spotify')">
+        <div class="icon">🎵</div>
+        <span class="label">Headset</span>
+      </div>
+      <div class="desk-item books" onclick="clickOnDeskItem('Sora')">
+        <div class="icon">📚</div>
+        <span class="label">Sora Books</span>
+      </div>
+      <div class="desk-item plant" onclick="clickOnDeskItem('Plant')">
+        <div class="icon">🌱</div>
+        <span class="label">Plant</span>
       </div>
     </div>
 
-    <!-- Right Column: The Mini-Games Side Panel -->
-    <div class="games-panel glass-card">
-      <h3>🎮 Mini-Game Corner</h3>
-      <div class="game-tabs">
-        <button class="tab-btn active" onclick="switchGame('ttt')">Tic-Tac-Toe</button>
-        <button class="tab-btn" onclick="switchGame('memory')">Memory</button>
-        <button class="tab-btn" onclick="switchGame('2048')">2048</button>
-      </div>
-
-      <!-- Tic-Tac-Toe Canvas Box -->
-      <div id="game-ttt" class="game-box active">
-        <div class="ttt-grid">
-          <div class="ttt-cell" onclick="makeTTTMove(0)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(1)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(2)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(3)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(4)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(5)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(6)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(7)"></div>
-          <div class="ttt-cell" onclick="makeTTTMove(8)"></div>
-        </div>
-        <p id="ttt-status">Your turn (X)</p>
-        <button class="reset-btn" onclick="resetTTT()">Reset Board</button>
-      </div>
-
-      <!-- Memory Game Canvas Box -->
-      <div id="game-memory" class="game-box">
-        <div id="memory-grid" class="memory-grid"></div>
-        <button class="reset-btn" onclick="resetMemory()">Restart Match</button>
-      </div>
-
-      <!-- 2048 Game Canvas Box -->
-      <div id="game-2048" class="game-box">
-        <div id="grid-2048" class="grid-2048">
-          <div class="cell-2048" id="c0"></div><div class="cell-2048" id="c1"></div><div class="cell-2048" id="c2"></div><div class="cell-2048" id="c3"></div>
-          <div class="cell-2048" id="c4"></div><div class="cell-2048" id="c5"></div><div class="cell-2048" id="c6"></div><div class="cell-2048" id="c7"></div>
-          <div class="cell-2048" id="c8"></div><div class="cell-2048" id="c9"></div><div class="cell-2048" id="ca"></div><div class="cell-2048" id="cb"></div>
-          <div class="cell-2048" id="cc"></div><div class="cell-2048" id="cd"></div><div class="cell-2048" id="ce"></div><div class="cell-2048" id="cf"></div>
-        </div>
-        <p>Use Buttons to Slide Tiles:</p>
-        <div class="controls-2048">
-          <button onclick="move2048('up')">🔼 Up</button><br>
-          <button onclick="move2048('left')">◀️ Left</button>
-          <button onclick="move2048('right')">▶️ Right</button><br>
-          <button onclick="move2048('down')">🔽 Down</button>
-        </div>
-      </div>
+    <!-- Frosted Launcher Card -->
+    <div id="glass-card" class="glass-card">
+      <h2 id="portal-title">🌸 Hub Standby</h2>
+      <p id="portal-desc">Tap a desk asset above to light up a connection portal!</p>
+      <a id="portal-link" href="#" target="_blank" style="display: none;">🚀 Open Portal</a>
     </div>
   </div>
 
