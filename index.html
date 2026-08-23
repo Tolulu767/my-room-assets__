@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌸 My Preppy Launcher Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Decorative Background Blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="dashboard-container">
+    <h1>🎀 My Preppy Desk Setup Launcher</h1>
+    <p class="subtitle">Click on any desk item to reveal its launcher portal!</p>
+
+    <!-- 2D Interactive Desk Row -->
+    <div class="desk-setup">
+      <!-- Item 1: Laptop -->
+      <div class="desk-item laptop" onclick="clickOnDeskItem('YouTube')">
+        <div class="icon">📺</div>
+        <span class="label">Laptop</span>
+      </div>
+
+      <!-- Item 2: French Notepad -->
+      <div class="desk-item notepad" onclick="clickOnDeskItem('innerFrench')">
+        <div class="icon">🇫🇷</div>
+        <span class="label">Notebook</span>
+      </div>
+
+      <!-- Item 3: Smart Tablet -->
+      <div class="desk-item tablet" onclick="clickOnDeskItem('Gmail')">
+        <div class="icon">📥</div>
+        <span class="label">Tablet</span>
+      </div>
+
+      <!-- Item 4: Headphones -->
+      <div class="desk-item headphones" onclick="clickOnDeskItem('Spotify')">
+        <div class="icon">🎵</div>
+        <span class="label">Headset</span>
+      </div>
+
+      <!-- Item 5: Stack of Books -->
+      <div class="desk-item books" onclick="clickOnDeskItem('Sora')">
+        <div class="icon">📚</div>
+        <span class="label">Sora Books</span>
+      </div>
+    </div>
+
+    <!-- Glassmorphic Display Card -->
+    <div id="glass-card" class="glass-card">
+      <h2 id="portal-title">🌸 Hub Standby</h2>
+      <p id="portal-desc">Your preppy room launcher is waiting. Tap a desk asset above to light up a connection portal!</p>
+      <a id="portal-link" href="#" target="_blank" style="display: none;">🚀 Open Portal</a>
+    </div>
+  </div>
+
+  <!-- Connects your dynamic script file perfectly -->
+  <script src="script.js"></script>
+</body>
+</html>
