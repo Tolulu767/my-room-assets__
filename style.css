@@ -1,30 +1,20 @@
-/* Custom resets & background canvas setup */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Roboto, sans-serif;
   background: linear-gradient(135deg, #ffeaa7 0%, #ff85a2 50%, #a29bfe 100%);
   min-height: 100vh;
-  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: background 0.8s ease;
+  transition: background 0.6s ease;
 }
 
-/* Preppy floating colorful light background blobs */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(70px);
-  z-index: 1;
-  opacity: 0.5;
-}
+.blob { position: absolute; border-radius: 50%; filter: blur(70px); z-index: 1; opacity: 0.5; }
 .blob1 { width: 300px; height: 300px; background: #55efc4; top: 10%; left: 15%; }
 .blob2 { width: 250px; height: 250px; background: #fd79a8; bottom: 10%; right: 15%; }
 
-/* Dashboard Wrapper Container */
 .dashboard-container {
   position: relative;
   z-index: 2;
@@ -33,49 +23,24 @@ body {
   text-align: center;
 }
 
-h1 {
-  color: #fff;
-  font-size: 2.5rem;
-  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 0 5px 0;
-}
+h1 { color: #fff; font-size: 2.5rem; text-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 0; }
+.subtitle { color: #fff; font-weight: 500; margin-bottom: 30px; }
 
-.subtitle {
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 30px;
-  min-height: 24px;
-}
-
-/* Interactive Desk Layout Row */
 .desk-setup {
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
   background: rgba(255, 255, 255, 0.25);
-  border-bottom: 12px solid #fff; /* White desktop line */
+  border-bottom: 12px solid #fff;
   padding: 25px;
   border-radius: 24px 24px 0 0;
   margin-bottom: 25px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
-/* Base Desk Items Styling */
-.desk-item {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  padding: 10px;
-}
+.desk-item { cursor: pointer; display: flex; flex-direction: column; align-items: center; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); padding: 10px; }
+.desk-item:hover { transform: translateY(-10px) scale(1.05); }
 
-/* Smooth spring-bounce hover animation */
-.desk-item:hover {
-  transform: translateY(-12px) scale(1.08);
-}
-
-/* Custom Pastel Uniform Shapes for each item */
 .laptop { background: #ffeaa7; width: 75px; height: 65px; border: 3px solid #fff; border-radius: 8px; }
 .notepad { background: #fd79a8; width: 60px; height: 75px; border: 3px solid #fff; border-radius: 6px; }
 .coffee { background: #ffbe76; width: 50px; height: 55px; border: 3px solid #fff; border-radius: 10px 10px 20px 20px; }
@@ -83,35 +48,21 @@ h1 {
 .books { background: #fab1a0; width: 60px; height: 70px; border: 3px solid #fff; border-radius: 6px; }
 .plant { background: #55efc4; width: 55px; height: 60px; border: 3px solid #fff; border-radius: 12px 12px 25px 25px; }
 
-.icon {
-  font-size: 1.8rem;
-  margin-top: 5px;
-}
+.icon { font-size: 1.8rem; margin-top: 5px; }
+.label { font-size: 0.7rem; font-weight: bold; color: #2d3436; margin-top: auto; background: #fff; padding: 2px 6px; border-radius: 20px; }
 
-.label {
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: #2d3436;
-  margin-top: auto;
-  background: #fff;
-  padding: 2px 6px;
-  border-radius: 20px;
-}
-
-/* ✨ THE GLASSMORPHISM CARD STYLE ✨ */
 .glass-card {
-  background: rgba(255, 255, 255, 0.2); /* Semi-transparent */
-  backdrop-filter: blur(15px); /* Frosted glass effect */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 24px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   color: #fff;
-  transition: background 0.4s ease;
+  transition: background 0.3s;
 }
 
-/* Launcher Button Links Inside Glass */
 #portal-link {
   background: #fff;
   color: #ff7675;
@@ -122,11 +73,4 @@ h1 {
   margin-top: 15px;
   display: inline-block;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: all 0.2s ease;
-}
-
-#portal-link:hover {
-  background: #ff7675;
-  color: #fff;
-  transform: translateY(-2px);
 }
