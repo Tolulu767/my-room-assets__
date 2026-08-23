@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎀 Cozy Arcade Station</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Light Background Orbs -->
+  <div class="glow-orb orb1"></div>
+  <div class="glow-orb orb2"></div>
+
+  <div class="arcade-wrapper">
+    <div class="header-navigation">
+      <a href="../index.html" class="back-home-btn">🌸 Back to My Desk</a>
+      <h2>🎮 Preppy Arcade Portal</h2>
+    </div>
+
+    <!-- Central Tablet Console Overlay Emulator Box -->
+    <div class="console-box glass-base">
+      <div class="console-selector">
+        <button class="game-tab active" onclick="activateArcadeGame('ttt')">🌸 Tic-Tac-Toe</button>
+        <button class="game-tab" onclick="activateArcadeGame('memory')">🍓 Memory Match</button>
+        <button class="game-tab" onclick="activateArcadeGame('game2048')">🦄 2048 Box</button>
+      </div>
+
+      <!-- GAME DECK 1: Tic-Tac-Toe Applet -->
+      <div id="deck-ttt" class="arcade-deck active">
+        <div class="ttt-grid-canvas">
+          <div class="ttt-cell" onclick="handleTTTClick(0)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(1)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(2)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(3)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(4)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(5)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(6)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(7)"></div>
+          <div class="ttt-cell" onclick="handleTTTClick(8)"></div>
+        </div>
+        <p id="ttt-announcement" class="arcade-status">Your turn! Place an 🌸</p>
+        <button class="arcade-reset-btn" onclick="clearTTTDeck()">✨ Reset Match</button>
+      </div>
+
+      <!-- GAME DECK 2: Vector Memory Match Applet -->
+      <div id="deck-memory" class="arcade-deck">
+        <div id="memory-matrix" class="memory-matrix-layout"></div>
+        <p id="memory-announcement" class="arcade-status">Find all matching pastel card pairs!</p>
+        <button class="arcade-reset-btn" onclick="rebuildMemoryMatrix()">✨ Shuffle Board</button>
+      </div>
+
+      <!-- GAME DECK 3: Full Performance 2048 Applet -->
+      <div id="deck-game2048" class="arcade-deck">
+        <div class="score-container-2048">Score: <span id="val-score-2048">0</span></div>
+        <div class="board-2048-canvas">
+          <div class="node-2048" id="n0"></div><div class="node-2048" id="n1"></div><div class="node-2048" id="n2"></div><div class="node-2048" id="n3"></div>
+          <div class="node-2048" id="n4"></div><div class="node-2048" id="n5"></div><div class="node-2048" id="n6"></div><div class="node-2048" id="n7"></div>
+          <div class="node-2048" id="n8"></div><div class="node-2048" id="n9"></div><div class="node-2048" id="n10"></div><div class="node-2048" id="n11"></div>
+          <div class="node-2048" id="n12"></div><div class="node-2048" id="n13"></div><div class="node-2048" id="n14"></div><div class="node-2048" id="n15"></div>
+        </div>
+        <div class="control-pad-2048">
+          <button class="pad-btn" onclick="processSlide2048('up')">🔼</button><br>
+          <button class="pad-btn" onclick="processSlide2048('left')">◀️</button>
+          <button class="pad-btn" onclick="processSlide2048('right')">▶️</button><br>
+          <button class="pad-btn" onclick="processSlide2048('down')">🔽</button>
+        </div>
+        <button class="arcade-reset-btn" onclick="initiate2048Engine()">✨ New Game</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
